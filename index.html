@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Friend</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer>
+    tailwind.config = {
+      theme: {
+        boxShadow: {
+          inner: 'inset 0 120px #fff',
+          none: 'inset 0 0 #fff',
+        },
+        extend: {
+          colors: {
+            primary: {
+              100: '#E44449',
+              200: '#F15156',
+              300: '#F36A6F',
+            },
+            secondary: {
+              100: "#0D3B66"
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-primary-200">
+
+  <nav class="bg-primary-100 border-gray-200 p-5  w-full">
+    <div class="container flex flex-wrap items-center justify-between max-w-7xl mx-auto">
+      <a href="https://flowbite.com/" class="flex items-center">
+        <img src="./assets/logo.svg" class="h-6 mr-3 " alt="Logo" />
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-black bg-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:inline md:w-auto" id="navbar-default">
+        <hr class="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700 md:hidden">
+        <ul
+          class="flex flex-col p-4 rounded-lg bg-transparent   md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:items-center">
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4  text-gray-200 hover:text-white rounded hover:bg-primary-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:after:block md:after:h-0.5 md:after:w-0 md:after:mt-1 md:after:hover:w-full md:after:bg-white md:after:duration-300"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 rounded text-gray-200 hover:text-white hover:bg-primary-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:after:block md:after:h-0.5 md:after:w-0 md:after:mt-1 md:after:hover:w-full md:after:bg-white md:after:duration-300">Sobre
+              o app</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 rounded text-gray-200 hover:text-white hover:bg-primary-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:after:block md:after:h-0.5 md:after:w-0 md:after:mt-1 md:after:hover:w-full md:after:bg-white md:after:duration-300">Animais
+              disponíveis</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 rounded text-gray-200 hover:text-white hover:bg-primary-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:after:block md:after:h-0.5 md:after:w-0 md:after:mt-1 md:after:hover:w-full md:after:bg-white md:after:duration-300">Sobre
+              a FindAFriend</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4  rounded text-gray-200 hover:text-white hover:bg-primary-200 md:hover:bg-transparent md:border-0  md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:after:block md:after:h-0.5 md:after:w-0 md:after:mt-1 md:after:hover:w-full md:after:bg-white md:after:duration-300">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="md:grid md:grid-cols-2  max-w-7xl m-auto mb-[100px] md:mb-0">
+      <div class="flex flex-col m-5 text-white">
+        <div class="my-9">
+          <div class="flex -space-x-2">
+            <img class="w-6 h-6 border-2 border-primary-200 rounded-full" src="./assets/avatar-1.jpg" alt="">
+            <img class="w-6 h-6 border-2 border-primary-200 rounded-full" src="./assets/avatar-2.jpg" alt="">
+            <img class="w-6 h-6 border-2 border-primary-200 rounded-full" src="./assets/avatar-3.jpg" alt="">
+            <img class="w-6 h-6 border-2 border-primary-200 rounded-full" src="./assets/avatar-4.jpg" alt="">
+          </div>
+          <span>
+            <strong>324 amigos</strong> na sua cidade
+          </span>
+        </div>
+
+        <h1 class="text-5xl mb-9">
+          Leve <br>
+          a felicidade <br>
+          para o seu lar
+        </h1>
+        <p class="hidden md:block">Encontre o animal de estimação ideal <br>
+          para seu estilo de vida!</p>
+
+      </div>
+
+      <!-- <div class="grid grid-cols-[1fr_1fr_1fr] gap-3 md:grid-cols-[minmax(280px,1fr)_minmax(50px,1fr)] md:mt-10">
+        <div class="w-[280px] h-[256px] rounded-r-lg bg-gradient-to-tr from-primary-100 to-primary-300 md:col-start-2  md:row-start-1 md:row-span-2 md:h-full md:w-full md:rounded-lg"></div>
+        <div
+          class="shrink-0 w-[280px] h-[256px] rounded-lg bg-gradient-to-tr from-primary-100 to-primary-300 flex items-end relative md:col-start-1 md:row-start-1 md:h-full md:w-full md:rounded-lg md:pt-8 md:px-8">
+          <img src="./assets/dog.png" alt="">
+          <button class="bg-white p-5 text-secondary-100 rounded-lg absolute inset-x-0 bottom-0 m-3 md:hidden">Acesse agora</button>
+        </div>
+        <div class="w-[280px] h-[256px] rounded-l-lg bg-gradient-to-tr from-primary-100 to-primary-300 p-5 md:rounded-lg md:h-full md:w-full">
+          <button class="bg-white p-5 text-secondary-100 rounded-lg w-full hidden md:block">Acesse agora</button>
+        </div>
+        <div class="w-[280px] h-[256px] hidden rounded-l-lg bg-gradient-to-tr from-primary-100 to-primary-300 p-5 md:block md:rounded-lg md:h-full md:w-full">
+         
+        </div>
+        <div class="w-[280px] h-[256px] hidden rounded-l-lg bg-gradient-to-tr from-primary-100 to-primary-300 p-5 md:block md:rounded-lg md:h-full md:w-full">
+          
+        </div>
+  
+      </div> -->
+      <div
+        class="bg-[url('./assets/bg-mobile.png')] bg-bottom bg-no-repeat  md:bg-[url('./assets/bg-desktop.png')] md:bg-contain md:bg-right-top relative md:mt-6">
+
+        <img src="./assets/dog.png" class="mx-auto -mb-14 md:w-[216px] md:absolute md:top-0 md:right-0 md:mr-[76px]"
+          alt="">
+        <!-- <button class="bg-white  absolute right-1/2 translate-x-1/2 rounded-lg p-4 -translate-y-5">Acesse agora</button> -->
+        <button
+          class="md:hidden absolute bottom-0 left-1/2 right-0  bg-white w-[186px] -translate-x-1/2 -translate-y-6 p-3 rounded-lg">Acesse
+          agora</button>
+        <button class="hidden md:block bg-white absolute py-2 px-6 rounded-lg bottom-0 right-[116px] mb-[52px]">Acesse
+          agora</button>
+      </div>
+
+
+
+    </section>
+    <section class="bg-white pt-10 md:pt-20 md:grid md:grid-cols-2 md:max-w-7xl md:mx-auto">
+      <div class="max-w-7xl m-auto md:col-start-2 md:row-start-1">
+        <div class="m-5 flex flex-col gap-5 lg:grid lg:grid-cols-2">
+          <h2 class="text-3xl md:mb-8 md:col-span-2 text-[#0D3B66]">Um app não, uma <br> caixinha de amigos...</h2>
+          <div class="bg-[#FDECED] p-5 rounded-lg border-2 border-[#ED1D23] border-opacity-30 ">
+            <img src="./assets/friends-icon-1.png" class="mb-3" alt="">
+            <p>
+              O <strong>FindAFriend</strong> é um produto <br>
+              desenvolvido para você encontrar <br>
+              o animal de estimação ideal ao seu
+              estilo de vida!
+            </p>
+          </div>
+          <div class="bg-[#FDECED] p-5 rounded-lg border-2 border-[#ED1D23] border-opacity-30">
+            <img src="./assets/friends-icon-2.png" alt="">
+            <p>
+              <strong>ONGs</strong> cadastram os bichinhos <br>
+              disponíveis para adoção informando <br>
+              características como: porte, nível de <br>
+              energia, nível de independência, <br>
+              sociabilidade e gênero.
+            </p>
+          </div>
+          <div class="bg-[#FDECED] p-5 rounded-lg border-2 border-[#ED1D23] border-opacity-30 md:col-span-2">
+            <img src="./assets/friends-icon-3.png" alt="">
+            <p>
+              <strong>Filtre os bichinhos</strong> de acordo com suas <br>
+              preferências e lifestyle. Depois é só<br>
+              entrar em contato com a ONG para agendar uma visita e conhecer<br>
+              pessoalmente seu <strong>match perfeito</strong>
+            </p>
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <div
+        class="bg-gradient-to-b from-[#FDECED] to-white  shadow-inner md:shadow-none md:rounded-lg  md:col-start-1 md:row-start-1 md:ml-4">
+
+        <img src="./assets/friends-group.png" class="object-contain md:hidden" alt="">
+        <img src="./assets/friends-group-desktop.png" class="hidden md:block" alt="">
+
+      </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+</body>
+
+</html>
